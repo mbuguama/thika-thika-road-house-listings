@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign Up - Thika House Hunter</title>
+    <title>Account Requests - Thika House Hunter</title>
     <link rel="stylesheet" href="css/style.css" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5752684232679683"
      crossorigin="anonymous"></script>
@@ -23,43 +23,16 @@
     <main class="auth-page">
       <div class="auth-container">
         <div class="auth-card">
-          <p class="auth-eyebrow">Thika House Hunter account</p>
-          <h1>Create your rental account</h1>
-          <p id="register-help" class="auth-subtitle">Use this form to save homes, request viewings, or manage listings. We do not ask for bank or card details during registration.</p>
+          <p class="auth-eyebrow">Account requests</p>
+          <h1>Account creation is temporarily contact-based</h1>
+          <p class="auth-subtitle">We have paused public password signup while Google reviews the site warning. You can still browse homes and contact the team to create a renter, landlord, agent, or broker account.</p>
 
-          <form id="register-form" class="auth-form" aria-describedby="register-help">
-            <div class="form-field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required />
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-            </div>
-            <div class="form-field">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password" required />
-            </div>
-            <div class="form-field">
-              <label for="role">I am a</label>
-              <select id="role" name="role" required>
-                <option value="">Select your role</option>
-                <option value="renter">Renter/Tenant</option>
-                <option value="landlord">Landlord/Agent/Broker</option>
-              </select>
-            </div>
-            <label class="privacy-consent">
-              <input type="checkbox" id="privacy-consent" name="privacy_consent" required />
-              <span>I agree to the <a href="privacy.html">Privacy Notice</a> and <a href="terms.html">Terms</a>, and consent to Thika House Hunter storing my account details for rental services.</span>
-            </label>
-            <p class="auth-trust-note">Landlord phone and ID verification is requested later inside the landlord dashboard, not on this registration page.</p>
-            <div class="form-actions">
-              <button type="submit" class="button button-primary">Create Account</button>
-            </div>
-            <div id="register-message" class="auth-message"></div>
-          </form>
+          <div class="auth-review-actions">
+            <a href="contact.html" class="button button-primary">Request an account</a>
+            <a href="explore.html" class="button button-secondary">Browse listings</a>
+          </div>
 
-          <p class="auth-footer">Already have an account? <a href="login.html">Sign in</a></p>
+          <p class="auth-trust-note">Thika House Hunter does not ask for bank details, card numbers, PINs, or payment codes on public account pages.</p>
           <p class="auth-legal-links"><a href="privacy.html">Privacy</a> <span aria-hidden="true">|</span> <a href="terms.html">Terms</a> <span aria-hidden="true">|</span> <a href="contact.html">Contact</a></p>
         </div>
       </div>
@@ -76,8 +49,6 @@
       </div>
     </footer>
 
-    <script src="js/api.js"></script>
-    <script src="js/auth.js"></script>
     <script src="js/mobile-menu.js"></script>
   </body>
 </html>

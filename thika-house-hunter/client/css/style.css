@@ -1219,6 +1219,12 @@ a.button:hover {
   font-weight: 700;
 }
 
+.auth-review-actions {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
 .legal-page {
   padding: 3rem 0;
 }
