@@ -1,0 +1,15 @@
+{
+  "name": "thika-house-listings-workspace",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix thika-house-hunter start",
+    "dev": "npm --prefix thika-house-hunter run dev",
+    "db:schema": "npm --prefix thika-house-hunter run db:schema",
+    "db:seed": "npm --prefix thika-house-hunter run db:seed",
+    "db:reset": "npm --prefix thika-house-hunter run db:reset",
+    "install:app": "npm --prefix thika-house-hunter install"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7"
+  }
+}

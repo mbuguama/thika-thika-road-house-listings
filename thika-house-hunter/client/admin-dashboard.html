@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard - Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=auto-ads-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="admin-dashboard.html" class="active">Admin</a>
+          <a href="explore.html">Explore</a>
+          <a href="landlord-dashboard.html">Landlord</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <button id="admin-logout-btn" class="button button-secondary">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-shell">
+      <aside class="admin-sidebar" id="admin-sidebar">
+        <div class="admin-sidebar-header">
+          <strong>Admin</strong>
+          <button id="sidebar-toggle" class="button button-secondary">Toggle</button>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#admin-summary" class="sidebar-link active">Dashboard</a>
+          <a href="#users-section" class="sidebar-link">Tenants & Landlords</a>
+          <a href="#properties-section" class="sidebar-link">Listings</a>
+          <a href="#verification-section" class="sidebar-link">Verification</a>
+          <a href="#market-settings-section" class="sidebar-link">Market Settings</a>
+          <a href="#ads-section" class="sidebar-link">Ads</a>
+          <a href="#reports-section" class="sidebar-link">Reports</a>
+        </nav>
+      </aside>
+
+      <section class="admin-main">
+        <section class="dashboard-header" id="admin-summary">
+          <div>
+            <p class="eyebrow">Platform oversight</p>
+            <h1>Admin dashboard</h1>
+            <p>Review tenants, landlords, listing status, bookings, and messages from one place.</p>
+          </div>
+        </section>
+
+        <section class="properties-summary admin-summary-grid">
+          <div class="summary-card">
+            <h3 id="admin-users-count">0</h3>
+            <p>Total Users</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-properties-count">0</h3>
+            <p>Total Listings</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-bookings-count">0</h3>
+            <p>Bookings</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-pending-count">0</h3>
+            <p>Pending Listings</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-landlord-verifications-count">0</h3>
+            <p>Owner / Agent Checks</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-reports-count">0</h3>
+            <p>Open Reports</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="admin-ads-count">0</h3>
+            <p>Active Ads</p>
+          </div>
+        </section>
+
+        <div id="admin-message" class="auth-message" aria-live="polite"></div>
+
+        <section class="dashboard-panel" id="users-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Tenants and landlords</h2>
+              <p>Filter accounts by role and remove accounts that should no longer access the platform.</p>
+            </div>
+            <div class="segmented-actions" aria-label="User role filter">
+              <button class="button button-secondary user-filter active" data-role="">All</button>
+              <button class="button button-secondary user-filter" data-role="renter">Tenants</button>
+              <button class="button button-secondary user-filter" data-role="landlord">Landlords</button>
+              <button class="button button-secondary user-filter" data-role="admin">Admins</button>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Joined</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="properties-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Listings oversight</h2>
+              <p>Approve pending listings, deactivate problem listings, and review landlord inventory.</p>
+            </div>
+            <div class="segmented-actions" aria-label="Listing status filter">
+              <button class="button button-secondary property-filter active" data-status="all">All</button>
+              <button class="button button-secondary property-filter" data-status="pending">Pending</button>
+              <button class="button button-secondary property-filter" data-status="active">Active</button>
+              <button class="button button-secondary property-filter" data-status="inactive">Inactive</button>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Listing</th>
+                  <th>Landlord</th>
+                  <th>Location</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-properties-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="verification-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Owner, agent and broker verification queue</h2>
+              <p>Review phone number and ID number before granting verified status.</p>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Owner / Agent</th>
+                  <th>Phone</th>
+                  <th>ID number</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-verification-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="market-settings-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Market settings</h2>
+              <p>Add areas, property types, and budget ranges used by renters and landlords.</p>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <form id="location-settings-form" class="settings-form">
+              <h3>New location</h3>
+              <div class="form-field">
+                <label for="setting-location-name">Area name</label>
+                <input id="setting-location-name" name="name" type="text" placeholder="Kisii Estate" required />
+              </div>
+              <div class="form-field">
+                <label for="setting-location-city">City / corridor</label>
+                <input id="setting-location-city" name="city" type="text" placeholder="Thika" />
+              </div>
+              <div class="form-grid compact-form-grid">
+                <div class="form-field">
+                  <label for="setting-location-latitude">Latitude</label>
+                  <input id="setting-location-latitude" name="latitude" type="number" step="0.0000001" placeholder="-1.0333" />
+                </div>
+                <div class="form-field">
+                  <label for="setting-location-longitude">Longitude</label>
+                  <input id="setting-location-longitude" name="longitude" type="number" step="0.0000001" placeholder="37.0693" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="setting-location-description">Short note</label>
+                <input id="setting-location-description" name="description" type="text" placeholder="Near town, schools, and matatu routes" />
+              </div>
+              <button class="button button-primary" type="submit">Add Location</button>
+              <div class="settings-list" id="admin-locations-list"></div>
+            </form>
+
+            <form id="property-type-settings-form" class="settings-form">
+              <h3>New property type</h3>
+              <div class="form-field">
+                <label for="setting-property-type-label">Type name</label>
+                <input id="setting-property-type-label" name="label" type="text" placeholder="1 Bedroom Apartment" required />
+              </div>
+              <div class="form-field">
+                <label for="setting-property-type-value">Code</label>
+                <input id="setting-property-type-value" name="value" type="text" placeholder="1-bedroom-apartment" />
+              </div>
+              <button class="button button-primary" type="submit">Add Type</button>
+              <div class="settings-list" id="admin-property-types-list"></div>
+            </form>
+
+            <form id="budget-settings-form" class="settings-form">
+              <h3>New budget range</h3>
+              <div class="form-field">
+                <label for="setting-budget-label">Range label</label>
+                <input id="setting-budget-label" name="label" type="text" placeholder="KES 60,000 - 90,000" required />
+              </div>
+              <div class="form-grid compact-form-grid">
+                <div class="form-field">
+                  <label for="setting-budget-min">Minimum</label>
+                  <input id="setting-budget-min" name="min_price" type="number" min="0" step="500" placeholder="60000" required />
+                </div>
+                <div class="form-field">
+                  <label for="setting-budget-max">Maximum</label>
+                  <input id="setting-budget-max" name="max_price" type="number" min="0" step="500" placeholder="90000" />
+                </div>
+              </div>
+              <button class="button button-primary" type="submit">Add Budget</button>
+              <div class="settings-list" id="admin-budgets-list"></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="ads-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Tenant ads</h2>
+              <p>Add sponsored placements shown across renter-facing sections. Local sponsor ads show first; automatic ads fill empty slots when configured.</p>
+            </div>
+          </div>
+
+          <form id="ad-campaign-form" class="settings-form ad-campaign-form">
+            <h3>New ad campaign</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="ad-title">Ad title</label>
+                <input id="ad-title" name="title" type="text" placeholder="Home internet offer" required />
+              </div>
+              <div class="form-field">
+                <label for="ad-advertiser">Advertiser</label>
+                <input id="ad-advertiser" name="advertiser_name" type="text" placeholder="Thika Fibre Co." required />
+              </div>
+              <div class="form-field">
+                <label for="ad-placement">Placement</label>
+                <select id="ad-placement" name="placement" required>
+                  <option value="tenant_home">Home page</option>
+                  <option value="tenant_explore_top">Explore top</option>
+                  <option value="tenant_explore_inline">Explore inline</option>
+                  <option value="tenant_property_sidebar">Property detail</option>
+                  <option value="tenant_favorites">Favorites</option>
+                  <option value="tenant_profile">Profile</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="ad-status">Status</label>
+                <select id="ad-status" name="status">
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="ad-target-url">Target URL</label>
+                <input id="ad-target-url" name="target_url" type="url" placeholder="https://example.com/offer" required />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="ad-image-url">Image URL</label>
+                <input id="ad-image-url" name="image_url" type="url" placeholder="https://example.com/banner.jpg" />
+              </div>
+              <div class="form-field">
+                <label for="ad-cta">Button label</label>
+                <input id="ad-cta" name="cta_label" type="text" placeholder="Get offer" />
+              </div>
+              <div class="form-field">
+                <label for="ad-sort-order">Priority</label>
+                <input id="ad-sort-order" name="sort_order" type="number" step="1" value="0" />
+              </div>
+              <div class="form-field">
+                <label for="ad-start-at">Start date</label>
+                <input id="ad-start-at" name="start_at" type="datetime-local" />
+              </div>
+              <div class="form-field">
+                <label for="ad-end-at">End date</label>
+                <input id="ad-end-at" name="end_at" type="datetime-local" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="ad-description">Short copy</label>
+                <textarea id="ad-description" name="description" rows="3" placeholder="Fast installation for tenants moving into Thika homes."></textarea>
+              </div>
+            </div>
+            <button class="button button-primary" type="submit">Add Ad</button>
+          </form>
+
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Campaign</th>
+                  <th>Placement</th>
+                  <th>Status</th>
+                  <th>Performance</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-ads-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="reports-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Listing reports</h2>
+              <p>Review scam, duplicate, unavailable, or incorrect listing reports from tenants.</p>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Listing</th>
+                  <th>Reporter</th>
+                  <th>Reason</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-reports-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/api.js?v=auto-ads-1"></script>
+    <script src="js/dashboard.js?v=auto-ads-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

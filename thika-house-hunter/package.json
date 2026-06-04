@@ -1,0 +1,40 @@
+{
+  "name": "thika-house-hunter",
+  "version": "1.0.0",
+  "description": "A Thika rental listings web app with an Express API and Neon Postgres database.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "db:schema": "node server/database/run-sql.js server/database/schema.sql",
+    "db:seed": "node server/database/run-sql.js server/database/seed.sql",
+    "db:reset": "npm run db:schema && npm run db:seed"
+  },
+  "keywords": [
+    "thika",
+    "rentals",
+    "express",
+    "neon",
+    "postgres"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

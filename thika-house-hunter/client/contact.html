@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact - Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="login.html" class="button button-secondary">Sign In</a>
+          <a href="register.html" class="button button-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:3rem 0;">
+      <div class="section-header">
+        <p class="eyebrow">Get in touch</p>
+        <h2>We'd love to hear from you</h2>
+      </div>
+
+      <div class="contact-layout" style="display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start;">
+        <section>
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Send message</button>
+            </div>
+            <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>Thanks, your message was sent.</div>
+            <div id="form-error" class="form-error" role="alert" hidden>Sorry, something went wrong. Try again later.</div>
+          </form>
+        </section>
+
+        <aside class="contact-info feature-card">
+          <h3>Contact information</h3>
+          <p>Address: Thika Town, Kenya</p>
+          <p>Email: hello@thikahousehunter.example</p>
+          <p>Phone: +254 700 000 000</p>
+          <div style="margin-top:1rem;">
+            <a href="about.html" class="button button-secondary">About us</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/session-nav.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

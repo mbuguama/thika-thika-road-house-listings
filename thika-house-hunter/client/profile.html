@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=auto-ads-1" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="profile.html" class="active">Profile</a>
+        </nav>
+
+        <div class="header-cta">
+          <button id="profileLogoutBtn" class="button button-secondary">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="profile-page">
+      <section class="profile-hero">
+        <div class="container profile-hero-grid">
+          <div class="profile-summary-card">
+            <div id="avatarCircle" class="profile-avatar-circle">
+              <span id="avatarInitials">TH</span>
+            </div>
+            <div>
+              <p class="eyebrow">My Profile</p>
+              <h1 id="userName">Loading...</h1>
+              <p id="userEmail" class="profile-email">Loading email...</p>
+              <span id="userRoleBadge" class="status-badge role-renter">Tenant</span>
+            </div>
+          </div>
+
+          <div class="profile-stat-grid">
+            <div class="summary-card">
+              <h3 id="savedCount">0</h3>
+              <p>Saved Homes</p>
+            </div>
+            <div class="summary-card">
+              <h3 id="recentCount">0</h3>
+              <p>Recently Viewed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container profile-grid">
+        <article class="dashboard-panel">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Edit profile</h2>
+              <p>Keep your renter details current for easier viewing requests.</p>
+            </div>
+          </div>
+
+          <form id="profileForm" class="property-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="nameInput">Full name</label>
+                <input type="text" id="nameInput" placeholder="Full Name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="emailInput">Email address</label>
+                <input type="email" id="emailInput" placeholder="Email" required />
+              </div>
+
+              <div class="form-field form-field-wide">
+                <label for="roleInput">Account type</label>
+                <select id="roleInput">
+                  <option value="user">Tenant</option>
+                  <option value="landlord">Landlord</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dashboard-form-actions">
+              <button type="submit" class="button button-primary">Save Changes</button>
+              <button type="button" class="button button-secondary" id="refreshProfileBtn">Refresh</button>
+            </div>
+            <div id="profileMessage" class="auth-message" aria-live="polite"></div>
+          </form>
+        </article>
+
+        <aside class="dashboard-panel profile-tips">
+          <h2>Quick actions</h2>
+          <a href="explore.html" class="button button-primary">Browse Homes</a>
+          <a href="favorites.html" class="button button-secondary">Open Favorites</a>
+        </aside>
+      </section>
+
+      <section class="container tenant-ad-slot" data-ad-placement="tenant_profile" data-ad-limit="1" aria-label="Sponsored"></section>
+
+      <section class="container profile-list-section">
+        <div class="dashboard-panel">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Saved houses</h2>
+              <p>Click any saved home to open its full details.</p>
+            </div>
+          </div>
+          <div class="profile-home-grid" id="savedProperties"></div>
+        </div>
+
+        <div class="dashboard-panel">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Recently viewed</h2>
+              <p>Jump back into homes you checked earlier.</p>
+            </div>
+          </div>
+          <div class="profile-home-grid" id="recentProperties"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/ads.js?v=auto-ads-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

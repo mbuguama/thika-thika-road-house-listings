@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Property Details — Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=auto-ads-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="login.html" class="button button-secondary">Sign In</a>
+          <a href="register.html" class="button button-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="property-detail-page">
+      <section class="property-hero">
+        <div class="property-hero-image">
+          <img id="property-main-image" src="" alt="Property" />
+        </div>
+        <div id="property-image-gallery" class="property-image-gallery"></div>
+      </section>
+
+      <section class="container property-content">
+        <div class="property-info-grid">
+          <div class="property-main">
+            <h1 id="property-title"></h1>
+            <div class="property-location-row">
+              <p id="property-location" class="property-location"></p>
+              <a id="property-map-link" class="button button-secondary map-pin-link" target="_blank" rel="noreferrer" hidden>
+                <span class="pin-icon" aria-hidden="true"></span>
+                Map
+              </a>
+            </div>
+
+            <div class="property-price-section">
+              <p class="property-price-label">Monthly Rent</p>
+              <h2 id="property-price" class="property-price"></h2>
+              <p id="move-in-total" class="move-in-total"></p>
+            </div>
+
+            <div class="property-highlights">
+              <div class="highlight-item">
+                <span class="highlight-label">Bedrooms</span>
+                <span id="property-beds" class="highlight-value"></span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-label">Bathrooms</span>
+                <span id="property-baths" class="highlight-value"></span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-label">Type</span>
+                <span id="property-type" class="highlight-value"></span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-label">Availability</span>
+                <span id="property-availability" class="highlight-value"></span>
+              </div>
+            </div>
+
+            <div class="property-trust">
+              <span id="verified-badge" class="status-badge status-pending">Verification pending</span>
+              <span id="last-confirmed" class="trust-copy"></span>
+            </div>
+
+            <div class="property-description">
+              <h3>About this property</h3>
+              <p id="property-desc">Verify, secure, and beautiful home in the heart of Thika with excellent access to shops, schools, and public transport.</p>
+            </div>
+
+            <div class="property-amenities">
+              <h3>Amenities</h3>
+              <ul id="property-tags" class="amenities-list"></ul>
+            </div>
+
+            <div class="property-amenities">
+              <h3>Move-in cost estimate</h3>
+              <ul id="move-in-breakdown" class="amenities-list"></ul>
+            </div>
+
+            <div class="property-amenities">
+              <h3>Location intelligence</h3>
+              <ul id="location-intelligence" class="amenities-list"></ul>
+            </div>
+
+            <div class="property-amenities">
+              <h3>Tenant safety</h3>
+              <p class="safety-note">Do not pay rent, deposit, viewing, or agent fees before confirming the home and landlord details. Use report listing if anything feels wrong.</p>
+              <button id="report-listing-btn" class="button button-secondary" type="button">Report Listing</button>
+              <div id="report-message" class="inquiry-message"></div>
+            </div>
+          </div>
+
+          <aside class="property-sidebar">
+            <div class="contact-card">
+              <h3>Interested?</h3>
+              <p id="contact-login-note">Sign in to contact verified landlords and book viewings.</p>
+              <form id="inquiry-form" class="inquiry-form">
+                <input type="text" placeholder="Your name" required />
+                <input type="email" placeholder="Your email" required />
+                <input type="tel" placeholder="Your phone" required />
+                <textarea placeholder="Message to landlord" rows="4"></textarea>
+                <button type="submit" class="button button-primary">Send Inquiry</button>
+              </form>
+              <form id="booking-form" class="inquiry-form">
+                <input type="datetime-local" id="viewing-date" required />
+                <textarea id="booking-message" placeholder="Preferred viewing details" rows="3"></textarea>
+                <button type="submit" class="button button-primary">Book Viewing</button>
+              </form>
+              <div id="inquiry-message" class="inquiry-message"></div>
+            </div>
+
+            <div class="action-buttons">
+              <button id="save-favorite-btn" class="button button-secondary">Save to Favorites</button>
+              <button id="share-btn" class="button button-secondary">Share</button>
+              <button id="agreement-btn" class="button button-secondary">Generate Agreement Draft</button>
+            </div>
+            <section class="tenant-ad-slot" data-ad-placement="tenant_property_sidebar" data-ad-limit="1" aria-label="Sponsored"></section>
+            <pre id="agreement-output" class="agreement-output" hidden></pre>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/session-nav.js"></script>
+    <script src="js/maps.js?v=pin-3"></script>
+    <script src="js/properties.js?v=pin-4"></script>
+    <script src="js/property-detail.js?v=gallery-2"></script>
+    <script src="js/ads.js?v=auto-ads-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

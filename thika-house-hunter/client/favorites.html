@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favorites — Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=auto-ads-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html" class="active">Favorites</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="login.html" class="button button-secondary">Sign In</a>
+          <a href="register.html" class="button button-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 0;">
+      <section class="hero">
+        <div class="hero-left">
+          <p class="eyebrow">Saved homes</p>
+          <h1>Your favorite listings in Thika</h1>
+          <p class="hero-copy">Review the properties you saved while browsing, and remove anything you no longer want to keep.</p>
+        </div>
+      </section>
+
+      <section class="tenant-ad-slot" data-ad-placement="tenant_favorites" data-ad-limit="1" aria-label="Sponsored"></section>
+
+      <section class="results-summary" id="favorites-summary">Loading saved homes...</section>
+      <section id="favorites-grid" class="listing-grid"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/session-nav.js"></script>
+    <script src="components/propertyCard.js?v=pin-4"></script>
+    <script src="js/maps.js?v=pin-3"></script>
+    <script src="js/properties.js?v=pin-4"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/ads.js?v=auto-ads-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

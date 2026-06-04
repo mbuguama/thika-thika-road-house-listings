@@ -1,0 +1,19 @@
+@media (max-width: 720px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .header-cta {
+    width: 100%;
+  }
+
+  .header-cta .button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: min(100% - 1rem, 1120px);
+  }
+}

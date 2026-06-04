@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+coverage/
+.DS_Store
+Thumbs.db
+
+thika-house-hunter/node_modules/
+thika-house-hunter/.env
+thika-house-hunter/.env.local
+thika-house-hunter/.env.*.local
+thika-house-hunter/uploads/
+thika-house-hunter/coverage/
+thika-house-hunter/.vercel/

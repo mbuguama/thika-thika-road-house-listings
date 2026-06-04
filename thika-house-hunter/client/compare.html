@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Compare properties - Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="login.html" class="button button-secondary">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:2rem 0;">
+      <h1 style="margin-bottom:1rem;">Compare properties</h1>
+
+      <div class="compare-grid">
+        <div class="compare-card" data-id="p1">
+          <div class="compare-media">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="3BR Family House" />
+          </div>
+          <h3 class="compare-title">3BR Family House - Thika Town</h3>
+          <p class="compare-price">KES 35,000</p>
+          <ul class="compare-features">
+            <li>3 bedrooms</li>
+            <li>2 bathrooms</li>
+            <li>Furnished</li>
+            <li>Parking</li>
+          </ul>
+          <div class="compare-actions">
+            <button class="button compare-remove">Remove</button>
+          </div>
+        </div>
+
+        <div class="compare-card" data-id="p2">
+          <div class="compare-media">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Studio Apartment" />
+          </div>
+          <h3 class="compare-title">Studio - Kenyatta Estate</h3>
+          <p class="compare-price">KES 12,000</p>
+          <ul class="compare-features">
+            <li>1 bedroom</li>
+            <li>1 bathroom</li>
+            <li>Unfurnished</li>
+            <li>No parking</li>
+          </ul>
+          <div class="compare-actions">
+            <button class="button compare-remove">Remove</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="compare-table-wrap" style="margin-top:2rem;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Property 1</th>
+              <th>Property 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td class="c-p1">KES 35,000</td>
+              <td class="c-p2">KES 12,000</td>
+            </tr>
+            <tr>
+              <td>Bedrooms</td>
+              <td class="c-p1">3</td>
+              <td class="c-p2">1</td>
+            </tr>
+            <tr>
+              <td>Bathrooms</td>
+              <td class="c-p1">2</td>
+              <td class="c-p2">1</td>
+            </tr>
+            <tr>
+              <td>Furnishing</td>
+              <td class="c-p1">Furnished</td>
+              <td class="c-p2">Unfurnished</td>
+            </tr>
+            <tr>
+              <td>Parking</td>
+              <td class="c-p1">Yes</td>
+              <td class="c-p2">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/session-nav.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

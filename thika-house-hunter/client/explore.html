@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Explore properties — Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=auto-ads-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="explore.html">Explore</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="login.html" class="button button-secondary">Sign In</a>
+          <a href="register.html" class="button button-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding:3rem 0;">
+      <div class="explore-header">
+        <div>
+          <p class="eyebrow">Find a home</p>
+          <h1>Explore the latest properties in Thika</h1>
+          <p class="hero-copy">Filter by type, compare prices, and discover verified rentals with easy booking options.</p>
+        </div>
+      </div>
+
+      <section class="explore-filters feature-card">
+        <form id="explore-filters" class="explore-form">
+          <input type="search" name="query" placeholder="Search by area, estate, or landmark" aria-label="Search properties" />
+          <select name="location" data-location-select data-first-label="All areas" aria-label="Area"></select>
+          <select name="type" data-property-type-select data-first-label="All property types" aria-label="Property type"></select>
+          <select name="budget" data-budget-select data-first-label="All budgets" aria-label="Budget range"></select>
+          <select name="availability" aria-label="Availability">
+            <option value="">Any availability</option>
+            <option value="available_now">Available now</option>
+            <option value="available_from">Available from date</option>
+          </select>
+          <select name="sort" aria-label="Sort by">
+            <option value="recommended">Recommended</option>
+            <option value="price-low">Price: Low to high</option>
+            <option value="price-high">Price: High to low</option>
+          </select>
+          <button type="submit" class="button button-primary">Apply filters</button>
+        </form>
+      </section>
+
+      <section class="tenant-ad-slot" data-ad-placement="tenant_explore_top" data-ad-limit="1" aria-label="Sponsored"></section>
+
+      <section class="location-intelligence-card" aria-labelledby="location-intelligence-title">
+        <div class="location-intelligence-header">
+          <div>
+            <p class="eyebrow">Location intelligence</p>
+            <h2 id="location-intelligence-title">Choose by Thika / Thika Road area</h2>
+          </div>
+        </div>
+        <div class="location-intelligence-grid">
+          <div class="location-map" id="location-map" aria-label="Thika and Thika Road location map"></div>
+          <div class="location-insights-panel">
+            <div class="location-chips" id="location-chips"></div>
+            <div class="selected-location-insight" id="selected-location-insight"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-summary" id="results-summary">Showing 0 properties</section>
+
+      <section class="tenant-ad-slot" data-ad-placement="tenant_explore_inline" data-ad-limit="2" aria-label="Sponsored"></section>
+
+      <section class="listing-grid" id="listing-grid"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/session-nav.js"></script>
+    <script src="components/propertyCard.js?v=pin-4"></script>
+    <script src="js/market-settings.js?v=settings-1"></script>
+    <script src="js/maps.js?v=pin-3"></script>
+    <script src="js/properties.js?v=pin-4"></script>
+    <script src="js/ads.js?v=auto-ads-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

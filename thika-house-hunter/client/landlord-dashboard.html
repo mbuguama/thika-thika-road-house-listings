@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landlord, Agent & Broker Dashboard - Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css?v=mpesa-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="landlord-dashboard.html" class="active">Dashboard</a>
+          <a href="explore.html">Explore</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <button class="button button-secondary" id="landlord-logout-btn">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar">
+        <nav class="sidebar-nav">
+          <a href="#properties-section" class="sidebar-link active">My Properties</a>
+          <a href="#payments-section" class="sidebar-link">Payments</a>
+          <a href="#verification-section" class="sidebar-link">Verification</a>
+          <a href="#listing-form-section" class="sidebar-link">Add Listing</a>
+          <a href="#bookings-section" class="sidebar-link">Bookings</a>
+        </nav>
+      </aside>
+
+      <main class="dashboard-content">
+        <section class="dashboard-header">
+          <div>
+            <p class="eyebrow">Landlord, agent & broker workspace</p>
+            <h1>Manage your listings</h1>
+            <p>Create new rentals, track status, and keep your Thika listings up to date.</p>
+          </div>
+          <a class="button button-primary" href="#listing-form-section">Add Property</a>
+        </section>
+
+        <section class="properties-summary">
+          <div class="summary-card">
+            <h3 id="total-properties">0</h3>
+            <p>Total Listings</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="total-inquiries">0</h3>
+            <p>Pending Inquiries</p>
+          </div>
+          <div class="summary-card">
+            <h3 id="total-bookings">0</h3>
+            <p>Active Bookings</p>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="payments-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>M-Pesa payments</h2>
+              <p>Pay verification fees and promote listings directly from your phone.</p>
+            </div>
+          </div>
+
+          <div class="payment-actions-grid">
+            <div class="form-field">
+              <label for="payment-phone">M-Pesa phone number</label>
+              <input id="payment-phone" name="payment_phone" type="tel" placeholder="07..." />
+            </div>
+            <div class="payment-action-card">
+              <div>
+                <h3>Verification fee</h3>
+                <p>Pay once, then submit your phone and ID details for admin approval.</p>
+              </div>
+              <button type="button" class="button button-primary" id="pay-verification-btn">
+                Pay <span id="verification-fee-label">KES 300</span>
+              </button>
+            </div>
+          </div>
+          <div id="payment-message" class="auth-message" aria-live="polite"></div>
+
+          <div class="dashboard-table-wrap payment-history-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Payment</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="payments-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="verification-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Landlord, agent or broker verification</h2>
+              <p>Submit your phone number and national ID number for admin approval.</p>
+            </div>
+            <span id="verification-status-badge" class="status-badge status-pending">Not submitted</span>
+          </div>
+
+          <form id="verification-form" class="property-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="verification-phone">Phone number</label>
+                <input id="verification-phone" name="phone" type="tel" placeholder="+254 7..." required />
+              </div>
+              <div class="form-field">
+                <label for="verification-id-number">ID number</label>
+                <input id="verification-id-number" name="id_number" type="text" inputmode="numeric" placeholder="National ID number" required />
+              </div>
+            </div>
+            <div class="dashboard-form-actions">
+              <button type="submit" class="button button-primary">Submit Verification</button>
+            </div>
+            <div id="verification-message" class="auth-message" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="dashboard-panel" id="listing-form-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Upload a new listing</h2>
+              <p>New listings go live immediately for now. Admin review tools are available on the admin dashboard.</p>
+            </div>
+          </div>
+
+          <form id="property-form" class="property-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="property-title">Property title</label>
+                <input id="property-title" name="title" type="text" placeholder="2BR apartment near Thika Road" required />
+              </div>
+              <div class="form-field">
+                <label for="property-type">Property type</label>
+                <select id="property-type" name="property_type" data-property-type-select data-first-label="Select property type" required></select>
+              </div>
+              <div class="form-field">
+                <label for="property-price">Monthly rent</label>
+                <input id="property-price" name="price" type="number" min="0" step="500" placeholder="25000" required />
+              </div>
+              <div class="form-field">
+                <label for="property-location">Location</label>
+                <select id="property-location" name="location" data-location-select data-first-label="Select area" required></select>
+              </div>
+              <div class="form-field">
+                <label for="property-bedrooms">Bedrooms</label>
+                <input id="property-bedrooms" name="bedrooms" type="number" min="0" value="1" required />
+              </div>
+              <div class="form-field">
+                <label for="property-bathrooms">Bathrooms</label>
+                <input id="property-bathrooms" name="bathrooms" type="number" min="0" value="1" required />
+              </div>
+              <div class="form-field">
+                <label for="property-size">Size in sqft</label>
+                <input id="property-size" name="size_sqft" type="number" min="0" placeholder="850" />
+              </div>
+              <div class="form-field">
+                <label for="availability-status">Availability</label>
+                <select id="availability-status" name="availability_status">
+                  <option value="available_now">Available now</option>
+                  <option value="available_from">Available from date</option>
+                  <option value="occupied">Occupied</option>
+                  <option value="under_review">Under review</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="available-from">Available from</label>
+                <input id="available-from" name="available_from" type="date" />
+              </div>
+              <div class="form-field">
+                <label for="deposit-amount">Deposit</label>
+                <input id="deposit-amount" name="deposit_amount" type="number" min="0" step="500" placeholder="25000" />
+              </div>
+              <div class="form-field">
+                <label for="service-charge">Service charge</label>
+                <input id="service-charge" name="service_charge" type="number" min="0" step="100" placeholder="0" />
+              </div>
+              <div class="form-field">
+                <label for="viewing-fee">Viewing fee</label>
+                <input id="viewing-fee" name="viewing_fee" type="number" min="0" step="100" placeholder="0" />
+              </div>
+              <div class="form-field">
+                <label for="agent-fee">Agent fee</label>
+                <input id="agent-fee" name="agent_fee" type="number" min="0" step="500" placeholder="0" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="utility-terms">Utility terms</label>
+                <input id="utility-terms" name="utility_terms" type="text" placeholder="Prepaid electricity, water billed monthly" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="payment-notes">Payment notes</label>
+                <input id="payment-notes" name="payment_notes" type="text" placeholder="One month rent plus one month deposit before move-in" />
+              </div>
+              <div class="form-field">
+                <label for="nearest-stage">Nearest matatu stage</label>
+                <input id="nearest-stage" name="nearest_stage" type="text" />
+              </div>
+              <div class="form-field">
+                <label for="nearby-school">Nearby school</label>
+                <input id="nearby-school" name="nearby_school" type="text" />
+              </div>
+              <div class="form-field">
+                <label for="nearby-hospital">Nearby hospital</label>
+                <input id="nearby-hospital" name="nearby_hospital" type="text" />
+              </div>
+              <div class="form-field">
+                <label for="nearby-mall">Nearby mall / market</label>
+                <input id="nearby-mall" name="nearby_mall" type="text" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="highway-access">Highway access</label>
+                <input id="highway-access" name="highway_access" type="text" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="property-image-file">Listing images</label>
+                <input id="property-image-file" name="image" type="file" accept="image/*" multiple />
+                <div id="property-image-preview" class="image-preview-grid" aria-live="polite"></div>
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="property-amenities">Amenities</label>
+                <input id="property-amenities" name="amenities" type="text" placeholder="Parking, water storage, balcony" />
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="property-description">Description</label>
+                <textarea id="property-description" name="description" rows="4" placeholder="Describe the home, access, security, and nearby amenities."></textarea>
+              </div>
+            </div>
+            <div class="form-actions dashboard-form-actions">
+              <button type="submit" class="button button-primary">Publish Listing</button>
+              <button type="reset" class="button button-secondary">Clear</button>
+            </div>
+            <div id="property-form-message" class="auth-message" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="dashboard-panel" id="properties-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>My properties</h2>
+              <p>Review the listings attached to your landlord, agent, or broker account.</p>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Location</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>Bookings</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="properties-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" id="bookings-section">
+          <div class="dashboard-panel-header">
+            <div>
+              <h2>Viewing bookings</h2>
+              <p>Accept, cancel, or complete tenant viewing requests.</p>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Tenant</th>
+                  <th>Viewing time</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookings-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/api.js?v=mpesa-1"></script>
+    <script src="js/market-settings.js?v=settings-1"></script>
+    <script src="js/maps.js?v=pin-3"></script>
+    <script src="js/landlord-dashboard.js?v=mpesa-1"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

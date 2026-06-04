@@ -1,0 +1,27 @@
+.form-field,
+.form-row {
+  min-width: 0;
+}
+
+.form-field small,
+.form-row small {
+  color: #64748b;
+}
+
+input[aria-invalid='true'],
+select[aria-invalid='true'],
+textarea[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.privacy-consent {
+  align-items: flex-start;
+  color: #475569;
+  display: flex;
+  gap: 0.65rem;
+  line-height: 1.45;
+}
+
+.privacy-consent input {
+  margin-top: 0.25rem;
+}

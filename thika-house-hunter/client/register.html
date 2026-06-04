@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up — Thika House Hunter</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Thika<span class="brand-accent">House</span></a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <div class="auth-container">
+        <div class="auth-card">
+          <h1>Create Account</h1>
+          <p class="auth-subtitle">Join Thika House Hunter to list or find your next home.</p>
+
+          <form id="register-form" class="auth-form">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="At least 8 characters" required />
+            </div>
+            <div class="form-field">
+              <label for="role">I am a</label>
+              <select id="role" name="role" required>
+                <option value="">Select your role</option>
+                <option value="renter">Renter/Tenant</option>
+                <option value="landlord">Landlord/Property Owner</option>
+              </select>
+            </div>
+            <label class="privacy-consent">
+              <input type="checkbox" id="privacy-consent" name="privacy_consent" required />
+              <span>I agree to the privacy notice and consent to Thika House Hunter storing my account details for rental services.</span>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Create Account</button>
+            </div>
+            <div id="register-message" class="auth-message"></div>
+          </form>
+
+          <p class="auth-footer">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Thika House Hunter. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>
