@@ -1110,6 +1110,15 @@ a.button:hover {
   color: #0f172a;
 }
 
+.auth-eyebrow {
+  color: #0069c4;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
 .auth-subtitle {
   color: #475569;
   margin-bottom: 2rem;
@@ -1184,6 +1193,66 @@ a.button:hover {
 
 .auth-footer a:hover {
   text-decoration: underline;
+}
+
+.auth-trust-note,
+.auth-legal-links {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.auth-trust-note {
+  background: #f8fafc;
+  border-left: 4px solid #059669;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.auth-legal-links {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+.auth-legal-links a {
+  color: #0069c4;
+  font-weight: 700;
+}
+
+.legal-page {
+  padding: 3rem 0;
+}
+
+.legal-layout {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.legal-section {
+  background: #ffffff;
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+  padding: 1.5rem;
+}
+
+.legal-section h1,
+.legal-section h2 {
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.legal-section p,
+.legal-section li {
+  color: #475569;
+}
+
+.legal-section ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
 }
 
 @media (max-width: 540px) {

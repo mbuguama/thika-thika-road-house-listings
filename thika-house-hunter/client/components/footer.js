@@ -10,6 +10,8 @@ function renderFooter(target = '#footer-root') {
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           <a href="explore.html">Explore</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
         </nav>
       </div>
     </footer>

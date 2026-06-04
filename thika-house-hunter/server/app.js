@@ -22,6 +22,8 @@ const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 const app = express();
 const clientPath = path.join(__dirname, '..', 'client');
 
+app.disable('x-powered-by');
+
 const defaultOrigins = [
   'http://localhost:5000',
   'https://thika-road-house-hunter.vercel.app',
@@ -66,6 +68,14 @@ app.use(
     credentials: true,
   }),
 );
+
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), payment=(), usb=()');
+  next();
+});
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));

@@ -25,3 +25,9 @@ textarea[aria-invalid='true'] {
 .privacy-consent input {
   margin-top: 0.25rem;
 }
+
+.privacy-consent a {
+  color: #0069c4;
+  font-weight: 700;
+  text-decoration: underline;
+}
