@@ -85,7 +85,9 @@ function loadAdsenseScript(client) {
   if (adsenseScriptPromise) return adsenseScriptPromise;
 
   adsenseScriptPromise = new Promise((resolve) => {
-    const existingScript = document.querySelector('script[data-thika-adsense="true"]');
+    const existingScript = document.querySelector(
+      'script[data-thika-adsense="true"], script[src^="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]',
+    );
     if (existingScript) {
       resolve(true);
       return;

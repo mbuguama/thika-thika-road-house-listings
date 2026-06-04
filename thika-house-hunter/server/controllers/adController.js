@@ -8,7 +8,7 @@ function booleanEnv(value, fallback = false) {
 
 function getAutomaticAdConfig() {
   const provider = process.env.AUTO_ADS_PROVIDER || 'adsense';
-  const client = process.env.GOOGLE_ADSENSE_CLIENT || '';
+  const client = process.env.GOOGLE_ADSENSE_CLIENT || 'ca-pub-5752684232679683';
 
   return {
     provider,

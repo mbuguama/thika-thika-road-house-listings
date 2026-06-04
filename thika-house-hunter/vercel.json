@@ -34,7 +34,7 @@
       "dest": "client/$1"
     },
     {
-      "src": "/(robots\\.txt|sitemap\\.xml)",
+      "src": "/(robots\\.txt|sitemap\\.xml|ads\\.txt)",
       "dest": "client/$1"
     },
     {
