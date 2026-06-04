@@ -24,6 +24,8 @@ const clientPath = path.join(__dirname, '..', 'client');
 
 const defaultOrigins = [
   'http://localhost:5000',
+  'https://thika-road-house-hunter.vercel.app',
+  'https://thika-house-hunter-mbuguamas-projects.vercel.app',
   process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
 ].filter(Boolean);
 
