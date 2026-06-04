@@ -1,0 +1,45 @@
+{
+  "name": "kenya-connect",
+  "version": "1.0.0",
+  "description": "Connect254 is a full-stack adult social discovery and dating platform for Kenya.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "db:schema": "node backend/database/run-sql.js backend/database/schema.sql",
+    "db:seed": "node backend/database/run-sql.js backend/database/seed.sql",
+    "db:check": "node backend/database/check-db.js",
+    "db:setup": "npm run db:schema && npm run db:seed && npm run db:check",
+    "db:reset": "npm run db:setup"
+  },
+  "keywords": [
+    "dating",
+    "kenya",
+    "social-discovery",
+    "express",
+    "neon",
+    "socket.io"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.10",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

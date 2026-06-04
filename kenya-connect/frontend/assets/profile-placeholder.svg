@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4f9cf9"/>
+      <stop offset="0.55" stop-color="#151c26"/>
+      <stop offset="1" stop-color="#36c9a5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g)"/>
+  <circle cx="450" cy="390" r="150" fill="rgba(255,255,255,0.72)"/>
+  <path d="M200 930c70-210 210-300 250-300s180 90 250 300" fill="rgba(255,255,255,0.72)"/>
+  <text x="450" y="1040" fill="#fff4dc" font-family="Arial, sans-serif" font-size="54" font-weight="800" text-anchor="middle">Connect254</text>
+</svg>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Login - Connect254</title><link rel="manifest" href="/manifest.webmanifest" /><link rel="stylesheet" href="/css/main.css" /></head>
+  <body>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="/">Connect<span>254</span></a><nav class="nav open"><a href="/pages/register.html">Register</a><a href="/pages/forgot-password.html">Forgot password</a></nav></div></header>
+    <main class="auth-page shell">
+      <section class="auth-card">
+        <p class="eyebrow">Welcome back</p>
+        <h1>Login</h1>
+        <form id="loginForm">
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required /></label>
+          <label class="field"><span>Password</span><input name="password" type="password" autocomplete="current-password" required /></label>
+          <button class="button button-primary" type="submit">Login</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </section>
+    </main>
+    <script src="/js/config.js"></script><script src="/js/api.js"></script><script src="/js/auth.js"></script><script src="/js/ui.js"></script>
+  </body>
+</html>

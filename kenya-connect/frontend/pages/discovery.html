@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Discover - Connect254</title><link rel="manifest" href="/manifest.webmanifest" /><link rel="stylesheet" href="/css/main.css" /></head>
+  <body>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="/">Connect<span>254</span></a><button class="mobile-menu-button" data-menu-button type="button">Menu</button><nav class="nav" data-nav><a href="/pages/dashboard.html">Dashboard</a><a href="/pages/messages.html">Messages</a><a href="/pages/premium.html">Premium</a><button data-theme-toggle type="button">Theme</button></nav></div></header>
+    <main class="page shell">
+      <div class="page-title"><p class="eyebrow">Discovery</p><h1>Browse Kenya.</h1><p>Filter by town, age, gender, relationship goals, verification, and activity.</p></div>
+      <div class="app-layout">
+        <aside class="panel filter-panel">
+          <form id="searchForm">
+            <label class="field"><span>Town</span><select name="town"><option value="all">All towns</option><option>Nairobi</option><option>Mombasa</option><option>Kisumu</option><option>Nakuru</option><option>Eldoret</option><option>Thika</option><option>Kiambu</option><option>Ruiru</option><option>Machakos</option><option>Nyeri</option><option>Meru</option></select></label>
+            <label class="field"><span>Gender</span><select name="gender"><option value="all">All</option><option>woman</option><option>man</option><option>non-binary</option></select></label>
+            <label class="field"><span>Goal</span><select name="relationship_goal"><option value="all">All goals</option><option>Long-term dating</option><option>Casual connection</option><option>Friendship first</option><option>Mature dating</option></select></label>
+            <label class="field"><span>Min age</span><input name="min_age" type="number" min="18" value="18" /></label>
+            <label class="field"><span>Max age</span><input name="max_age" type="number" max="99" value="60" /></label>
+            <label class="field"><span>Education</span><input name="education" placeholder="College, university..." /></label>
+            <label class="field"><span>Occupation</span><input name="occupation" placeholder="Designer, business..." /></label>
+            <label class="field"><span>Interest</span><input name="interest" placeholder="music, travel, food..." /></label>
+            <label class="field"><span>Verification</span><select name="verified"><option value="all">All profiles</option><option value="true">Verified only</option></select></label>
+            <label class="field"><span>Sort</span><select name="sort"><option value="active">Recently active</option><option value="popular">Most popular</option><option value="newest">Newest</option><option value="nearest">Nearest</option></select></label>
+            <button class="button button-primary" type="submit">Search</button>
+          </form>
+        </aside>
+        <section class="profile-grid" id="profilesGrid" aria-live="polite"></section>
+      </div>
+    </main>
+    <script src="/js/config.js"></script><script src="/js/api.js"></script><script src="/js/ui.js"></script><script src="/js/discovery.js"></script>
+  </body>
+</html>

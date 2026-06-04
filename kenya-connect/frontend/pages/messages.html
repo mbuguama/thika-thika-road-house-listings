@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Messages - Connect254</title><link rel="stylesheet" href="/css/main.css" /></head>
+  <body>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="/">Connect<span>254</span></a><nav class="nav open"><a href="/pages/dashboard.html">Dashboard</a><a href="/pages/discovery.html">Discover</a></nav></div></header>
+    <main class="page shell">
+      <div class="page-title"><p class="eyebrow">Real-time chat</p><h1>Messages.</h1><p>Conversation history, typing indicators, read receipts, and media support are powered by Socket.io on the backend.</p></div>
+      <section class="conversation-layout">
+        <aside class="panel filter-panel"><h2>Conversations</h2><div class="list-stack" id="conversationList"></div></aside>
+        <section class="panel">
+          <div class="message-window" id="messageWindow"><p class="hero-copy">Select a match to view messages.</p></div>
+          <form id="messageForm" class="filter-panel"><label class="field"><span>Message</span><input name="message" placeholder="Type a respectful message..." /></label><button class="button button-primary" type="submit">Send</button></form>
+        </section>
+      </section>
+    </main>
+    <script src="/js/config.js"></script><script src="/js/api.js"></script><script src="/js/ui.js"></script><script src="/js/messages.js"></script>
+  </body>
+</html>

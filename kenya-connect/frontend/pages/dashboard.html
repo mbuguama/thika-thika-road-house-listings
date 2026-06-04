@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Dashboard - Connect254</title><link rel="stylesheet" href="/css/main.css" /></head>
+  <body>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="/">Connect<span>254</span></a><nav class="nav open"><a href="/pages/discovery.html">Discover</a><a href="/pages/messages.html">Messages</a><a href="/pages/notifications.html">Notifications</a><button data-logout type="button">Logout</button></nav></div></header>
+    <main class="page shell">
+      <div class="page-title"><p class="eyebrow">Dashboard</p><h1>Your account.</h1></div>
+      <section class="metrics-grid" id="dashboardRoot"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></section>
+      <section class="settings-grid" style="margin-top:1rem;">
+        <article class="panel feature-card"><h3>Matches</h3><p>Review mutual matches and continue conversations when both people choose each other.</p><a class="button button-muted" href="/pages/messages.html">Open messages</a></article>
+        <article class="panel feature-card"><h3>Settings</h3><p>Keep your visibility, interests, town, and relationship goal updated for better recommendations.</p><a class="button button-muted" href="/pages/discovery.html">Browse discovery</a></article>
+      </section>
+      <section class="dashboard-grid" style="margin-top:1rem;">
+        <form class="panel filter-panel" id="profileForm">
+          <h2>Profile management</h2>
+          <label class="field"><span>Display name</span><input name="display_name" required /></label>
+          <label class="field"><span>Age</span><input name="age" type="number" min="18" required /></label>
+          <label class="field"><span>Town</span><input name="town" placeholder="Nairobi" /></label>
+          <label class="field"><span>Gender</span><input name="gender" /></label>
+          <label class="field"><span>Goal</span><input name="relationship_goal" /></label>
+          <label class="field"><span>Occupation</span><input name="occupation" /></label>
+          <label class="field"><span>Education</span><input name="education" /></label>
+          <label class="field"><span>Interests</span><input name="interests" placeholder="music, travel, food" /></label>
+          <label class="field"><span>Bio</span><textarea name="bio" rows="4"></textarea></label>
+          <button class="button button-primary" type="submit">Save profile</button>
+          <p class="form-message" id="profileMessage"></p>
+        </form>
+        <aside class="panel filter-panel">
+          <h2>Photos and verification</h2>
+          <p class="hero-copy">Upload a profile photo for moderation. Cloudinary stores the image when your Cloudinary keys are added.</p>
+          <form id="photoForm">
+            <label class="field"><span>Profile photo</span><input name="photo" type="file" accept="image/*" required /></label>
+            <button class="button button-secondary" type="submit">Upload photo</button>
+            <p class="form-message" id="photoMessage"></p>
+          </form>
+          <div class="list-stack" style="margin-top:1rem;">
+            <a class="button button-muted" href="/pages/contact.html">Contact support</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="/js/config.js"></script><script src="/js/api.js"></script><script src="/js/auth.js"></script><script src="/js/ui.js"></script><script src="/js/dashboard.js"></script>
+  </body>
+</html>

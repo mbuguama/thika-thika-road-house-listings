@@ -1,0 +1,17 @@
+{
+  "name": "Connect254",
+  "short_name": "Connect254",
+  "description": "Adult social discovery and dating across Kenya.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7faff",
+  "theme_color": "#043873",
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
